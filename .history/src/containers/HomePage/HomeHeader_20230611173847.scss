@@ -1,0 +1,25 @@
+.home-header-container{
+    height: 80px;
+    width: 100%;
+
+    .home-header-content{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        .left-content{
+            width: 25%;
+            border: 1px solid red;
+            .header-logo{
+                background: url('./');
+            }
+        }
+        .center-content{
+            width: 50%;
+            border: 1px solid yellow;
+        }
+        .right-content{
+            width: 25%;
+            border: 1px solid pink;
+        }
+    }
+}

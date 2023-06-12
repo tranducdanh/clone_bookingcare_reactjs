@@ -1,0 +1,11 @@
+.home-header-container{
+    height: 80px;
+    border: 1px solid red;
+    width: 100%;
+
+    .home-header-content{
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+}

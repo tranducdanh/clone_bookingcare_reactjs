@@ -1,0 +1,149 @@
+.home-header-container {
+    height: 80px;
+    width: 100%;
+    padding: 0 30px;
+
+    .home-header-content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        .left-content {
+            width: 25%;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            i {
+                font-size: 30px;
+                padding: 0 20px;
+                cursor: pointer;
+                color: #636e72;
+            }
+            .header-logo {
+                cursor: pointer;
+                margin-right: 20px;
+                background: url('../../assets/logo.svg') center center no-repeat;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .center-content {
+            padding: 0 30px;
+            width: 50%;
+            border: 1px solid yellow;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .child-content {
+                .subs-title {
+                    font-weight: 300;
+                    font-size: 11px;
+                }
+            }
+        }
+        .right-content {
+            width: 25%;
+            border: 1px solid pink;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 30px;
+            i {
+                color: #636e72;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.home-header-banner {
+    background: url('../../assets/header-background.jpg');
+    
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+
+    .content-up {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.1));
+        border: 1px solid;
+        height: 70%;
+        .title-1 {
+            text-align: center;
+            color: white;
+            font-size: 35px;
+            text-shadow: 1px 1px 1px #333;
+            // margin-bottom: 10px;
+            margin-top: 50px;
+        }
+        .title-2 {
+            color: white;
+            text-align: center;
+            font-weight: 500;
+            font-size: 40px;
+            text-shadow: 1px 1px 1px #333;
+        }
+        .search {
+            background: #f7d800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 18px;
+            border-radius: 35px;
+            width: fit-content;
+            padding: 8px;
+            i {
+                margin: 0 8px;
+            }
+            input {
+                margin: 0 5px;
+                height: 35px;
+                width: 400px;
+                outline: none;
+                background: transparent;
+                border: none;
+            }
+        }
+    }
+    .content-down {
+        height: 30%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 1));
+        padding-top: 30px;
+        .options {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            .option-child{
+                border: 1px solid red;
+                text-align: center;
+                width: 105px;
+                .icon-child{
+                    background: white;
+                    box-shadow: 1px 1px 1px #333;
+                    width: 45px;
+                    height: 45px;
+                    padding: 12px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+                    i{
+                        color: #49bce2;
+                        font-size: 22px;
+                    }
+                }
+                .text-child{
+                    font-weight: 600;
+                    font-size: 16px;
+                    &:hover{
+                        color:#49bce2 ;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+    }
+}

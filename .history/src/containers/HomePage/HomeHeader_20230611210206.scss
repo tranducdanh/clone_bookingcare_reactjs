@@ -1,0 +1,94 @@
+.home-header-container {
+    height: 80px;
+    width: 100%;
+    padding: 0 30px;
+
+    .home-header-content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        .left-content {
+            width: 25%;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            i {
+                font-size: 30px;
+                padding: 0 20px;
+                cursor: pointer;
+                color: #636e72;
+            }
+            .header-logo {
+                cursor: pointer;
+                margin-right: 20px;
+                background: url('../../assets/logo.svg') center center no-repeat;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .center-content {
+            padding: 0 30px;
+            width: 50%;
+            border: 1px solid yellow;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .child-content {
+                .subs-title {
+                    font-weight: 300;
+                    font-size: 11px;
+                }
+            }
+        }
+        .right-content {
+            width: 25%;
+            border: 1px solid pink;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 30px;
+            i {
+                color: #636e72;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.home-header-banner {
+    background: url('../../assets/header-background.jpg');
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 45px 0;
+    
+    .title-1 {
+        text-align: center;
+        color: white;
+        font-size: 35px;
+        text-shadow: 1px 1px 1px #333;
+        margin-bottom: 10px;
+    }
+    .title-2 {
+        color: white;
+        text-align: center;
+        font-weight: 500;
+        font-size: 40px;
+        text-shadow: 1px 1px 1px #333;
+    }
+    .search {
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        border-radius: 30px;
+        width: 450px;
+        height: 50px;
+        
+    }
+    .options {
+        color: red;
+    }
+}

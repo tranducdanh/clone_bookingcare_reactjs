@@ -1,0 +1,43 @@
+.home-header-container{
+    height: 80px;
+    width: 100%;
+    padding: 0 30px;
+
+    .home-header-content{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        .left-content{
+            width: 25%;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            i{
+                font-size: 30px;
+                padding: 0 20px;
+                cursor: pointer;
+                color: #636e72;
+            }
+            .header-logo{   
+                cursor: pointer;
+                margin-right: 20px;
+                background: url('../../assets/logo.svg') center center no-repeat;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .center-content{
+            padding: 0 30px;
+            width: 50%;
+            border: 1px solid yellow;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .chi
+        }
+        .right-content{
+            width: 25%;
+            border: 1px solid pink;
+        }
+    }
+}
