@@ -1,0 +1,74 @@
+.section-specialty {
+    height: 330px;
+    background: #f5f5f5;
+    border: 1px solid red;
+    border-bottom: 3px solid #efeef5;
+
+    .specialty-container {
+        margin: 0 140px;
+        display: flex;
+        flex-direction: column;
+
+        .specialty-header {
+            height: 60px;
+            
+        }
+
+        .specialty-body {
+            border: 1px solid red;
+            width: 1170px;
+            margin-left: auto;
+            margin-right: auto;
+
+            
+            
+
+            .specialty-custom{
+                .bg-img{
+                    height: 150px;
+                    width: 278px;
+                    background: url('../../../assets/specialty/co-xuong-khop.jpg');
+                    background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #eee;
+                }
+            }
+            
+
+            .slick-prev {
+                z-index: 100 !important;
+                height: 48px !important;
+                width: 44px !important;
+                left: -10px !important;
+                background: #fff !important ;
+                border: 1px solid #bdc3c7 !important;
+
+                &:hover {
+                    background: #ecf0f1 !important;
+                }
+            }
+
+            .slick-prev:before,
+            .slick-next:before {
+                font-family: 'Font Awesome 5 Free' !important;
+                color: #c0392b !important;
+                font-size: 26px !important;
+                // content: "\e257" !important;
+            }
+
+            .slick-next {
+                z-index: 100 !important;
+                height: 48px !important;
+                width: 44px !important;
+                right: -10px !important;
+                background: #fff !important ;
+                border: 1px solid #bdc3c7 !important;
+
+                &:hover {
+                    background: #ecf0f1 !important;
+                }
+            }
+        }
+    }
+}

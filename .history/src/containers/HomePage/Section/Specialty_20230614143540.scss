@@ -1,0 +1,29 @@
+.section-specialty{
+    height: 330px;
+    background: #f5f5f5;
+    border: 1px solid red;
+    
+    .specialty-container{
+        margin: 0 70px;
+        display: flex;
+        flex-direction: column;
+
+        .specialty-header{
+            height: 60px;
+            
+        }
+
+        .specialty-body{
+            border: 1px solid red;
+            .img-custom{
+                // height: 300px;
+                // border: 1px solid orange;
+            }
+                
+        }
+
+        
+    }
+}
+
+
