@@ -1,0 +1,39 @@
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 7px solid #f3f3f3; /* Light grey */
+    border-top: 7px solid #383636; /* Black */
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+  }
+
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .preview-img-container{
+    .label-upload{
+      cursor: pointer;
+      padding: 6px 18px;
+      border-radius: 3px;
+      background-color: #bdc3c7;
+      opacity: 1;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+    .preview-image{
+      height: 100px;
+      width: 100%;
+      border: 1px solid #ddd;
+      background: center center no-repeat;
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
