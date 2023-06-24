@@ -1,0 +1,41 @@
+.doctor-detail-container{
+    border: 3px solid purple;
+    height: 100%;
+    width: 100%;
+    .doctor-intro{
+        border: 1px solid greenyellow;
+        width: 1170px;
+        height: fit-content;
+        margin: 15px auto;
+        padding: 0 15px;
+        display: flex;
+        .doctor-img{
+            .abc{
+                width: 120px;
+                height: 120px;
+            }
+            padding-right: 15px;
+        }
+        .doctor-detail{
+            display: flex;
+            flex-direction: column;
+            .doctor-position{
+                font-size: 27px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                line-height: 1.2;
+            }
+            .doctor-desc{
+                color: #555;
+                font-size: 13px;
+            }
+            .plugin-fb{
+                margin-top: 10px;
+                height: 25px;
+            }
+        }
+    }
+    .doctor-schedule{}
+    .doctor-detail-info{}
+    .doctor-comment{}
+}
