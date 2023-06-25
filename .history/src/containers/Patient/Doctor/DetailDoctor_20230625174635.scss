@@ -1,0 +1,78 @@
+.doctor-detail-container{
+    // border: 3px solid purple;
+    height: 100vh;
+    width: 100vw;
+    .doctor-intro{
+        // border: 1px solid greenyellow;
+        width: 1170px;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 25px 15px;
+        display: flex;
+        .doctor-img{
+            .image{
+                width: 120px;
+                height: 120px;                
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: #eee;
+                border-radius: 50%;
+            }
+            padding-right: 15px;
+        }
+        .doctor-detail{
+            display: flex;
+            flex-direction: column;
+            .doctor-position{
+                font-size: 27px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                line-height: 1.2;
+            }
+            .doctor-desc{
+                color: #555;
+                font-size: 13px;
+            }
+            .plugin-fb{
+                margin-top: 10px;
+                height: 25px;
+            }
+        }
+    }
+    .doctor-schedule-main{
+        height: fit-content;
+        width: 100%;
+        .doctor-schedule{
+            height: fit-content;
+            width: 1170px;
+            margin: 0 auto;
+            .content-left{
+                width: 50%;
+                
+            }
+            .content-right{
+                width: 50%;
+            }
+        }
+    }
+    .doctor-detail-info{
+        background-color: #f9f9f9;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        .detail{
+            width: 1170px;
+            height: fit-content;
+            margin: 0 auto;
+            padding:25px 15px;
+
+            img{
+                
+                width: 100%;
+            }
+        }
+    }
+    .doctor-comment{
+        height: 200px;
+    }
+}
