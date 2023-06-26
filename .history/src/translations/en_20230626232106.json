@@ -1,0 +1,75 @@
+{
+    "home-header": {
+        "specialty": "Medical specialty",
+        "search-doctor": "Find a doctor by specialty",
+        "health-facility": "Health facilities",
+        "select-room": "Choose hospital clinic",
+        "doctor": "Doctors",
+        "select-doctor": "Choose a good doctor",
+        "fee": "Health care package",
+        "check-health": "General health check",
+        "support": "Support",
+        "welcome": "Welcome"
+    },
+    "banner": {
+        "title1": "MEDICAL PLATFORM",
+        "title2": "COMPREHENSIVE HEALTH CARE",
+        "child1": "Specialist Examination",
+        "child2": "Remote examination",
+        "child3": "General examination",
+        "child4": "Medical test",
+        "child5": "Mental health",
+        "child6": "Dental examination"
+    },
+    "menu": {
+        "admin": {
+            "manage-user": "Users system",
+            "manage-doctor": "Manage doctors",
+            "manage-admin": "Manage admins",
+            "crud-redux": "CRUD Users redux",
+            "crud": "CRUD Users",
+            "clinic": "Clinics",
+            "manage-clinic": "Manage clinics",
+            "specialty": "Specialties",
+            "manage-specialty": "Manage specialties",
+            "handbook": "Handbooks",
+            "manage-handbook": "Manage handbooks"
+        },
+        "doctor": {
+            "manage-schedule":"Manage medical examination plan",
+            "create-info":"Create doctor information",            
+            "select-doctor":"Select doctor" ,            
+            "intro":"Introduce "    
+            
+        }
+    },
+    "manage-user":{
+        "add":"Add A New Users",
+        "email":"Email",
+        "password":"Password",
+        "first-name":"First Name",
+        "last-name":"Last Name",
+        "phonenumber":"Phone Number",
+        "address":"Address",
+        "gender":"Gender",
+        "position":"Position",
+        "role":"Role",
+        "image":"Image",
+        "save":"Save",
+        "edit":"Save changes"
+        
+    },
+    "home-page":{
+        "outstanding-doctor":"Outstanding doctors",
+        "more":"Search doctor",
+        "text-calendar":"Examination schedule",
+        "book":"Select and book schedule the examination here (free)",
+        "book-empty":"No appointment scheduled for this day !!!"
+    },
+    "manage-schedule":{
+        "title":"Manage medical examination plan",
+        "choose-dr":"Choose a doctor",
+        "choose-date":"Choose a date",
+        "save":"Save information"
+    }
+}
