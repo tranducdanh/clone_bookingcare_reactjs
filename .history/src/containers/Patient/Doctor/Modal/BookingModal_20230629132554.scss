@@ -1,0 +1,42 @@
+.booking-modal-container{
+    
+    .booking-modal-content{
+        padding: 10px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        .booking-modal-header{
+            height: fit-content;            
+            border-bottom: 1px solid #ccc;
+            padding: 3px 10px 7px 10px;
+            .left{
+                color: #666;  
+                text-transform: uppercase;
+                font-weight: bold;                
+            }
+            .right{
+                color: #666;                
+                float: right;
+                font-size: 16px;                
+                cursor: pointer;
+            }
+        }
+        .booking-modal-body{
+            height: 100%;
+            .doctor-infor-modal{}
+            .price-modal{
+                
+            }
+        }
+        .booking-modal-footer{
+            height: fit-content;
+            border-top: 1px solid #ccc;
+            padding: 10px 10px 3px 10px;
+            display: flex;
+            justify-content: flex-end;
+            .btn-warning{
+                margin-left: 18px;
+            }
+        }
+    }
+}

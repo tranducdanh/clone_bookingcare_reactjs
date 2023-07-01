@@ -1,0 +1,27 @@
+.doctor-intro-profile{
+    height: fit-content;
+    display: flex;
+    .doctor-img-profile{
+        .image-profile{
+            width: 90px;
+            height: 90px;                
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+        padding: 0 12px;
+    }.doctor-detail-profile{
+        padding: 10px 15px;
+        border-left: 1px solid #eee;
+        .doctor-position-profile{
+            color: #4b4b4b;
+            font-weight:bold ;
+            font-size: 14px;
+        }
+        .doctor-desc-profile{
+            font-size: 13px;
+        }
+    }
+}

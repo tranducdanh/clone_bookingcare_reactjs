@@ -1,0 +1,81 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import './DoctorSchedule.scss';
+import moment from 'moment';
+import localization from 'moment/locale/vi';
+import { LANGUAGES } from '../../../utils';
+import {getScheduleByDate} from '../../../services/userService'
+import { FormattedMessage } from 'react-intl';
+
+class DoctorSchedule extends Component {
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            allDays: [],
+            allAvailableTime: [],
+        };
+    }
+
+    componentDidMount() {
+        let { language } = this.props;        
+        let allDays = this.getArrDays(language)
+            this.setState({
+                allDays: allDays,
+            })   
+    }
+
+    getArrDays = (language)=>{
+        let allDays = [];
+        for (let i = 0; i < 7; i++) {
+            let object = {};
+            if (language === LANGUAGES.VI) {
+                if(i === 0){
+                    let ddMM = moment(new Date()).format('DD/MM');
+                    let toDay = `Hôm nay - ${ddMM}`
+                    object.label = toDay
+                }else{
+                    object.label = moment(new Date()).add(i, 'days').format('ddd - DD/MM');
+                }
+                
+            } else {
+                if(i === 0){
+                    let ddMM = moment(new Date()).format('DD/MM');
+                    let toDay = `Today - ${ddMM}`
+                    object.label = toDay
+                }else{
+                    object.label = moment(new Date()).add(i, 'days').locale('en').format('ddd - DD/MM');
+                }
+            }
+                object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
+                allDays.push(object);
+        }
+        // console.log('check array date: ', arrDate);
+
+        return allDays
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        
+    }
+
+    
+
+    render() {
+        
+        return (
+            <div></div>
+        );
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        language: state.app.language,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DoctorSchedule);
