@@ -1,0 +1,72 @@
+.detail-specialty-container {
+    .make-color-specialty{
+        height: fit-content;
+        background-color: #eeeeee;
+        .search-doctor-location {
+            width: 1170px;
+            margin: 0 auto;
+            padding: 15px 0;
+            
+            .select-location {
+                display: block;
+                padding: 8px 15px;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #212529;            
+                background-color: #fff;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                outline: none;
+                // appearance: none;
+            }
+        }
+        .each-doctor {
+            height: fit-content;
+            // border: 1px solid greenyellow;
+            display: flex;
+            width: 1170px;
+            margin: 0 auto;
+            padding: 0 15px;
+            mar
+    
+            background-color: #fff;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            border-radius: 8px;
+            .content-left {
+                width: 50%;
+                .profile-doctor-specialty {
+                    margin: 0 10px;
+                    padding: 10px 0;
+                    border-right: 1px solid #eee;
+                }
+            }
+            .content-right {
+                width: 50%;
+                .content-right-up {
+                    padding: 10px;
+                }
+                .content-right-down {
+                    padding: 10px 0;
+                    margin: 0 10px;
+                    border-top: 1px solid #eee;
+                }
+            }
+        }
+    }
+    .description-specialty-main {
+        
+        padding: 15px 0;
+        height: fit-content;
+        border-bottom: 3px solid #efeef5;
+        .description-specialty {
+            width: 1170px;
+            padding: 10px 15px;
+            margin: 0 auto;
+            height: fit-content;
+            // border: 1px solid red;
+        }
+    }
+    
+    
+}

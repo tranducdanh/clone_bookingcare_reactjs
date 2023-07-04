@@ -1,0 +1,41 @@
+.doctor-intro-profile{
+    height: fit-content;
+    display: flex;
+    .doctor-img-profile{
+        .image-profile{
+            width: 90px;
+            height: 90px;                
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+        padding: 0 12px;
+    }.doctor-detail-profile{
+        padding: 10px 15px;
+        
+        .doctor-position-profile{
+            color: #3d3d3d;
+            font-weight:bold ;
+            font-size: 14px;
+        }
+        .doctor-desc-profile{
+            font-size: 13px;
+        }
+    }
+}
+.link-view-detail-doctor{
+    font-size: 14px;
+    color: #45c3d2;
+    cursor: pointer;
+    .link-viewƠ
+    
+}
+.price-modal{
+    margin: 8px 0 ;
+    .text-price-modal{
+        font-weight: bold;
+        color: #3d3d3d;
+    }
+}
