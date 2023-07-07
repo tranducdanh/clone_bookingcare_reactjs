@@ -37,7 +37,7 @@
         },
         "doctor": {
             "manage-schedule":"Manage medical examination plan",
-            "manage-patient":"Management of medical examination patients",
+            "manage-patient":"Manage medical examination plan",
             "create-info":"Create doctor information",            
             "select-doctor":"Select doctor" ,            
             "intro":"Presentation of information",            
