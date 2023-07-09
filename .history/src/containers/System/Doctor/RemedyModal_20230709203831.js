@@ -1,0 +1,96 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
+import './RemedyModal.scss';
+import { Modal } from 'reactstrap';
+import { toast } from 'react-toastify';
+import moment from 'moment';
+
+class RemedyModal extends Component {
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            email:'',
+            imgBase64:''
+        };
+    }
+
+    componentDidMount() {}
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(prevProps.da)
+    }
+
+    render() {
+        let { isOpenRemedyModal, closeRemedyModal, dataModal, sendRemedy } = this.props;
+        // console.log('check state: ', this.state);
+        return (
+            <div>
+                <Modal
+                    size='md'
+                    centered
+                    isOpen={isOpenRemedyModal}
+                    className={'remedy-modal-container'}
+                >
+                    <div className='remedy-modal-content'>
+                        <div className='remedy-modal-header'>
+                            <span className='left'>
+                                <FormattedMessage id='home-page.remedy.title' />
+                            </span>
+                            <span onClick={closeRemedyModal} className='right'>
+                                <i className='fas fa-times'></i>
+                            </span>
+                        </div>
+                        <div className='remedy-modal-body'>
+                            <div className='row'>
+                                <div className='col-6 form-group'>
+                                    <label><FormattedMessage id='home-page.remedy.email' /></label>
+                                    <input
+                                        type='email'
+                                        value={dataModal.email}
+                                        className='form-control'
+                                    />
+                                </div>
+                                <div className='col-6 form-group'>
+                                    <label><FormattedMessage id='home-page.remedy.file' /></label>
+                                    <input
+                                        type='file'
+                                        className='form-control-file'
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='remedy-modal-footer'>
+                            <button
+                                onClick={closeRemedyModal}
+                                className='btn btn-secondary'
+                            >
+                                <FormattedMessage id='home-page.remedy.cancel' />
+                            </button>
+
+                            <button
+                                onClick={sendRemedy}
+                                className='btn btn-warning'
+                            >
+                                <FormattedMessage id='home-page.remedy.send' />
+                            </button>
+                        </div>
+                    </div>
+                </Modal>
+            </div>
+        );
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        language: state.app.language,
+        genders: state.admin.genders,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(RemedyModal);
