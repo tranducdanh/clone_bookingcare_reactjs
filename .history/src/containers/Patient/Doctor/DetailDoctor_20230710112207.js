@@ -6,14 +6,15 @@ import { getDetailDoctor } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfor from './DoctorExtraInfor';
-import LikeAndShare from '../SocialPlugin/LikeAndShare';
-import Comment from '../SocialPlugin/Comment';
+import LikeAndShare
+import  from '../SocialPlugin/LikeAndShare';
+
 class DetailDoctor extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
             detailDoctor: {},
-            currentDoctorId: -1,
+            currentDoctorId: -1
         };
     }
 
@@ -25,12 +26,13 @@ class DetailDoctor extends Component {
         ) {
             let id = this.props.match.params.id;
             this.setState({
-                currentDoctorId: id,
-            });
+                currentDoctorId: id
+            })
             let res = await getDetailDoctor(id);
             if (res && res.errCode === 0) {
                 this.setState({
                     detailDoctor: res.data,
+                    
                 });
             }
         }
@@ -47,9 +49,6 @@ class DetailDoctor extends Component {
             nameVi = `${detailDoctor.positionData.valueVi}, ${detailDoctor.lastName} ${detailDoctor.firstName}`;
             nameEn = `${detailDoctor.positionData.valueEn}, ${detailDoctor.firstName} ${detailDoctor.lastName}`;
         }
-
-        let currentURL = +process.env.REACT_APP_IS_LOCALHOST === 1 ? 'https://developers.facebook.com/docs/plugins/comments#configurator'
-                : window.location.href;
         return (
             <React.Fragment>
                 <HomeHeader isShowBanner={false} />
@@ -80,45 +79,28 @@ class DetailDoctor extends Component {
                                         </span>
                                     )}
                             </div>
-                            <div className='plugin-fb'>
-                                <LikeAndShare dataHref={currentURL} />
-                            </div>
+                            <div className='plugin-fb'>{/* coming soon */}</div>
                         </div>
                     </div>
                     <div className='doctor-schedule-main'>
                         <div className='doctor-schedule'>
                             <div className='content-left'>
-                                <DoctorSchedule
-                                    detailDoctor={this.state.currentDoctorId}
-                                />
+                                <DoctorSchedule detailDoctor={this.state.currentDoctorId}/>
                             </div>
                             <div className='content-right'>
-                                <DoctorExtraInfor
-                                    detailDoctor={this.state.currentDoctorId}
-                                />
+                                <DoctorExtraInfor detailDoctor={this.state.currentDoctorId}/>
                             </div>
                         </div>
                     </div>
                     <div className='doctor-detail-info'>
                         <div className='detail'>
-                            {detailDoctor &&
-                                detailDoctor.Markdown &&
-                                detailDoctor.Markdown.contentHTML && (
-                                    <div
-                                        dangerouslySetInnerHTML={{
-                                            __html: detailDoctor.Markdown
-                                                .contentHTML,
-                                        }}
-                                    ></div>
-                                )}
+                            {detailDoctor&&detailDoctor.Markdown&&detailDoctor.Markdown.contentHTML&&
+                            <div dangerouslySetInnerHTML={{__html: detailDoctor.Markdown.contentHTML }}></div>}
                         </div>
                     </div>
-                    <div className='doctor-comment-container'>
-                        <div className='comment'>
-                            <Comment dataHref={currentURL} width={'100%'} />
-                        </div>
-                    </div>
+                    <div className='doctor-comment'>{/* coming soon */}</div>
                 </div>
+                
             </React.Fragment>
         );
     }

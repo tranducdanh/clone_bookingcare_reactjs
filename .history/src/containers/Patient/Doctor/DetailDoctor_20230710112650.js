@@ -13,7 +13,7 @@ class DetailDoctor extends Component {
         super(props, context);
         this.state = {
             detailDoctor: {},
-            currentDoctorId: -1,
+            currentDoctorId: -1
         };
     }
 
@@ -25,12 +25,13 @@ class DetailDoctor extends Component {
         ) {
             let id = this.props.match.params.id;
             this.setState({
-                currentDoctorId: id,
-            });
+                currentDoctorId: id
+            })
             let res = await getDetailDoctor(id);
             if (res && res.errCode === 0) {
                 this.setState({
                     detailDoctor: res.data,
+                    
                 });
             }
         }
@@ -48,8 +49,7 @@ class DetailDoctor extends Component {
             nameEn = `${detailDoctor.positionData.valueEn}, ${detailDoctor.firstName} ${detailDoctor.lastName}`;
         }
 
-        let currentURL = +process.env.REACT_APP_IS_LOCALHOST === 1 ? 'https://developers.facebook.com/docs/plugins/comments#configurator'
-                : window.location.href;
+        let currentURL = process.env.REACT_APP_IS_LOCALHOST === true ?'':window.location.href
         return (
             <React.Fragment>
                 <HomeHeader isShowBanner={false} />
@@ -81,44 +81,35 @@ class DetailDoctor extends Component {
                                     )}
                             </div>
                             <div className='plugin-fb'>
-                                <LikeAndShare dataHref={currentURL} />
+                                <LikeAndShare
+                                    dataHref={currentURL}
+                                />
                             </div>
                         </div>
                     </div>
                     <div className='doctor-schedule-main'>
                         <div className='doctor-schedule'>
                             <div className='content-left'>
-                                <DoctorSchedule
-                                    detailDoctor={this.state.currentDoctorId}
-                                />
+                                <DoctorSchedule detailDoctor={this.state.currentDoctorId}/>
                             </div>
                             <div className='content-right'>
-                                <DoctorExtraInfor
-                                    detailDoctor={this.state.currentDoctorId}
-                                />
+                                <DoctorExtraInfor detailDoctor={this.state.currentDoctorId}/>
                             </div>
                         </div>
                     </div>
                     <div className='doctor-detail-info'>
                         <div className='detail'>
-                            {detailDoctor &&
-                                detailDoctor.Markdown &&
-                                detailDoctor.Markdown.contentHTML && (
-                                    <div
-                                        dangerouslySetInnerHTML={{
-                                            __html: detailDoctor.Markdown
-                                                .contentHTML,
-                                        }}
-                                    ></div>
-                                )}
+                            {detailDoctor&&detailDoctor.Markdown&&detailDoctor.Markdown.contentHTML&&
+                            <div dangerouslySetInnerHTML={{__html: detailDoctor.Markdown.contentHTML }}></div>}
                         </div>
                     </div>
-                    <div className='doctor-comment-container'>
-                        <div className='comment'>
-                            <Comment dataHref={currentURL} width={'100%'} />
-                        </div>
+                    <div className='doctor-comment'>
+                        <Comment
+                            dataHref={}
+                        />
                     </div>
                 </div>
+                
             </React.Fragment>
         );
     }

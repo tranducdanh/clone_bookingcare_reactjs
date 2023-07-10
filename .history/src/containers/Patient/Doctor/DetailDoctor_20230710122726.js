@@ -48,8 +48,8 @@ class DetailDoctor extends Component {
             nameEn = `${detailDoctor.positionData.valueEn}, ${detailDoctor.firstName} ${detailDoctor.lastName}`;
         }
 
-        let currentURL = +process.env.REACT_APP_IS_LOCALHOST === 1 ? 'https://developers.facebook.com/docs/plugins/comments#configurator'
-                : window.location.href;
+        // let currentURL = +process.env.REACT_APP_IS_LOCALHOST === 1 ? 'https://eric-restaurant-bot-tv.herokuapp.com/'
+        //         : window.location.href;
         return (
             <React.Fragment>
                 <HomeHeader isShowBanner={false} />
